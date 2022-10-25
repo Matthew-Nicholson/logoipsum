@@ -1,8 +1,8 @@
-@use "/theme/colors";
-@use "/theme/fonts";
-@use "/theme/breakpoints";
-@use "/theme/sizes";
-@import "/theme/globals";
+@use "./theme/colors";
+@use "./theme/fonts";
+@use "./theme/breakpoints";
+@use "./theme/sizes";
+@import "./theme/globals";
 
 .app {
   text-align: center;

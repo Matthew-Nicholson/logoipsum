@@ -1,12 +1,15 @@
 import React from "react";
 import "./App.scss";
 import Layout from "../../layout/Layout";
+import Hero from "../hero/Hero";
 
 function App() {
   return (
     <Layout>
       <div className="app">
         <header className="app-header">
+          <Hero />
+
           <h1 className="h1">Heading 1</h1>
           <h2 className="h2">Heading 2</h2>
           <h3 className="h3">Heading 3</h3>

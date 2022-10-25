@@ -1,0 +1,51 @@
+@use "../../theme/fonts";
+@use "../../theme/sizes";
+@import "../../theme/breakpoints";
+@import "../../theme/colors";
+@import "../../theme/globals";
+
+.hero {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  @include gap(sizes.$size-md, $row: true, $column: true);
+
+  @include mq($tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hero__content {
+  max-width: 45.9rem;
+}
+
+.hero__desc {
+  margin-top: sizes.$size-md;
+}
+
+.hero__btn-group {
+  margin-top: sizes.$size-xl;
+  display: flex;
+  align-items: center;
+  @include gap(sizes.$size-lg, $row: true);
+
+  .download-icon {
+    border: solid 1px $base-300;
+    border-radius: 50rem;
+    width: 6rem;
+    height: 6rem;
+    display: grid;
+    place-items: center;
+  }
+}
+
+.hero__img {
+  width: calc(61rem / 2);
+  height: calc(64.4rem / 2);
+
+  @include mq($laptop) {
+    width: 61rem;
+    height: 64.4rem;
+  }
+}

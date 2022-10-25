@@ -1,0 +1,20 @@
+@use "fonts";
+@use "breakpoints";
+
+@mixin addColorScheme($color, $focus, $content) {
+  color: $content;
+  background-color: $color;
+  &:focus,
+  &:hover {
+    background-color: $focus;
+  }
+}
+
+@mixin fontSize($size) {
+  @include fonts.decreaseFontSize($size);
+  @include breakpoints.mq(breakpoints.$tablet) {
+    & {
+      font-size: $size;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+// Font family
+$family-heading: "DM Sans", sans-serif;
+$family-base: "Mulish", sans-serif;
+
+// Font Size
+$size-3xl: 8rem;
+$size-2xl: 6rem;
+$size-xl: 5rem;
+$size-lg: 2.4rem;
+$size-md: 2rem;
+$size-sm: 1.7rem;
+$size-xm: 1.5rem;
+
+@mixin decreaseFontSize($size) {
+  font-size: calc($size - ($size / 4));
+}

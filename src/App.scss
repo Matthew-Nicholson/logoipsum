@@ -1,0 +1,73 @@
+@use "theme/colors";
+@use "theme/fonts";
+@use "theme/breakpoints";
+@use "theme/sizes";
+@import "theme/globals";
+
+.app {
+  text-align: center;
+}
+
+.app-header {
+  background-color: colors.$base-100;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: colors.$base-content;
+
+  > p {
+    max-width: 45ch;
+  }
+
+  .demo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+
+    .box {
+      min-width: 10rem;
+      padding: 1rem;
+      border-radius: sizes.$radius;
+      cursor: default;
+
+      &.primary {
+        @include addColorScheme(
+          colors.$primary,
+          colors.$primary-focus,
+          colors.$primary-content
+        );
+        border: solid 1px colors.$neutral;
+      }
+      &.secondary {
+        @include addColorScheme(
+          colors.$secondary,
+          colors.$secondary-focus,
+          colors.$secondary-content
+        );
+      }
+      &.accent {
+        @include addColorScheme(
+          colors.$accent,
+          colors.$accent-focus,
+          colors.$accent-content
+        );
+      }
+      &.neutral {
+        @include addColorScheme(
+          colors.$neutral,
+          colors.$neutral-focus,
+          colors.$neutral-content
+        );
+      }
+      &.base-200 {
+        @include addColorScheme(
+          colors.$base-200,
+          colors.$base-300,
+          colors.$base-focus
+        );
+      }
+    }
+  }
+}

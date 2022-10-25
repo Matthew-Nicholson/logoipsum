@@ -1,0 +1,66 @@
+@use "theme/colors";
+@use "theme/fonts";
+@use "theme/breakpoints";
+@use "theme/sizes";
+@import "theme/globals";
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Mulish:wght@300;400;700&display=swap");
+
+* {
+  // Remove default styles
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  list-style: none;
+  line-height: normal;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: fonts.$family-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include fontSize(fonts.$size-md);
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: colors.$base-focus;
+  font-weight: 700;
+  font-family: fonts.$family-heading;
+}
+
+.link {
+  font-family: fonts.$family-heading;
+  font-weight: 700;
+  color: colors.$primary;
+
+  &:hover,
+  &:focus {
+    color: colors.$primary-focus;
+  }
+}
+
+.h1 {
+  @include fontSize(fonts.$size-3xl);
+}
+.h2 {
+  @include fontSize(fonts.$size-2xl);
+}
+.h3 {
+  @include fontSize(fonts.$size-xl);
+}
+.h4 {
+  @include fontSize(fonts.$size-lg);
+}

@@ -20,5 +20,5 @@ examples:
 ## Contributors
 
 [Matthew](https://github.com/Matthew-Nicholson) |
-[JoseMaster](https://github.com/innorbitx)
+[JoseMaster](https://github.com/innorbitx) |
 [AbrahamDN](https://github.com/AbrahamDN) |

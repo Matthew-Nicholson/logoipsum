@@ -1,0 +1,27 @@
+@use "../../theme/fonts";
+@use "../../theme/sizes";
+@import "../../theme/breakpoints";
+@import "../../theme/colors";
+@import "../../theme/globals";
+
+.logo-list {
+  width: auto;
+  padding: sizes.$size-xl 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: sizes.$size-lg;
+  row-gap: sizes.$size-md;
+
+  @include mq($phone) {
+    justify-content: center;
+  }
+
+  @include mq($tablet) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include gap(sizes.$size-md, $row: true);
+  }
+}

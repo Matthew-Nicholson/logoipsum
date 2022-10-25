@@ -2,6 +2,7 @@ import React from "react";
 import "./App.scss";
 import Layout from "../../layout/Layout";
 import Hero from "../hero/Hero";
+import LogoList from "../logoList/LogoList";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <div className="app">
         <header className="app-header">
           <Hero />
+          <LogoList />
 
           <h1 className="h1">Heading 1</h1>
           <h2 className="h2">Heading 2</h2>

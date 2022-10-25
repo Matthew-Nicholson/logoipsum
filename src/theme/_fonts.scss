@@ -10,7 +10,3 @@ $size-lg: 2.4rem;
 $size-md: 2rem;
 $size-sm: 1.7rem;
 $size-xm: 1.5rem;
-
-@mixin decreaseFontSize($size) {
-  font-size: calc($size - ($size / 4));
-}

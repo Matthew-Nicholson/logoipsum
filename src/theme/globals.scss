@@ -1,12 +1,6 @@
 @use "fonts";
 @use "breakpoints";
 
-@mixin mq($breakpoint) {
-  @media (min-width: $breakpoint) {
-    @content;
-  }
-}
-
 @mixin addColorScheme($color, $focus, $content) {
   color: $content;
   background-color: $color;
@@ -16,11 +10,34 @@
   }
 }
 
+@mixin decreaseFontSize($size, $number: 4) {
+  font-size: calc($size - ($size / $number));
+}
+
 @mixin fontSize($size) {
-  @include fonts.decreaseFontSize($size);
+  @include decreaseFontSize($size);
   @include mq(breakpoints.$tablet) {
     & {
       font-size: $size;
     }
+  }
+}
+
+@mixin gap($size, $column: false, $row: false) {
+  & > * {
+    &:not(&:first-child) {
+      @if $column {
+        margin-top: $size;
+      }
+      @if $row {
+        margin-left: $size;
+      }
+    }
+  }
+}
+
+@mixin mq($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
   }
 }

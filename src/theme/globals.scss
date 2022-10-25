@@ -1,6 +1,12 @@
 @use "fonts";
 @use "breakpoints";
 
+@mixin mq($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
 @mixin addColorScheme($color, $focus, $content) {
   color: $content;
   background-color: $color;
@@ -12,7 +18,7 @@
 
 @mixin fontSize($size) {
   @include fonts.decreaseFontSize($size);
-  @include breakpoints.mq(breakpoints.$tablet) {
+  @include mq(breakpoints.$tablet) {
     & {
       font-size: $size;
     }

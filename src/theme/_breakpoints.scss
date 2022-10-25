@@ -3,9 +3,3 @@ $tablet: 900px;
 $laptop: 1200px;
 $desktop: 1440px;
 $desktop-lg: 1800px;
-
-@mixin mq($breakpoint) {
-  @media (min-width: $breakpoint) {
-    @content;
-  }
-}

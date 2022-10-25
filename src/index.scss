@@ -64,3 +64,23 @@ body {
 .h4 {
   @include fontSize(fonts.$size-lg);
 }
+
+.root {
+  display: grid;
+  place-items: center;
+}
+
+.main {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: sizes.$container;
+  padding-left: sizes.$size-sm;
+  padding-right: sizes.$size-sm;
+  @include mq(breakpoints.$laptop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

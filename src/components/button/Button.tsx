@@ -3,19 +3,26 @@ import { ButtonProps } from "./Button.types";
 import "./Button.scss";
 
 const Button = ({
-  className,
   children,
+  className,
   flex,
   onClick,
+  path,
   variant = "primary",
 }: ButtonProps) => {
+  const Element = path ? "a" : "button";
+  const pathProps = path ? { href: path } : {};
+
   return (
-    <button
-      className={`btn ${variant} ${flex ? "flex" : ""} ${className || ""}`}
+    <Element
+      className={`btn btn--${variant} ${flex ? "btn--flex" : ""} ${
+        className || ""
+      }`}
       onClick={onClick}
+      {...pathProps}
     >
       {children}
-    </button>
+    </Element>
   );
 };
 

@@ -7,24 +7,25 @@
   border-radius: $radius;
   padding: 1.9rem;
   font-weight: 700;
+  text-align: center;
   min-width: 22.1rem;
   cursor: pointer;
   transition: all 150ms ease-in-out;
+}
 
-  &.flex {
-    width: 100%;
-  }
+.btn--flex {
+  width: 100%;
+}
 
-  &.primary {
-    @include addColorScheme($primary, $primary-focus, $primary-content);
-  }
-  &.secondary {
-    @include addColorScheme($secondary, $secondary-focus, $secondary-content);
-  }
-  &.accent {
-    @include addColorScheme($accent, $accent-focus, $accent-content);
-  }
-  &.neutral {
-    @include addColorScheme($neutral, $neutral-focus, $neutral-content);
-  }
+.btn--primary {
+  @include addColorScheme($primary, $primary-focus, $primary-content);
+}
+.btn--secondary {
+  @include addColorScheme($secondary, $secondary-focus, $secondary-content);
+}
+.btn--accent {
+  @include addColorScheme($accent, $accent-focus, $accent-content);
+}
+.btn--neutral {
+  @include addColorScheme($neutral, $neutral-focus, $neutral-content);
 }

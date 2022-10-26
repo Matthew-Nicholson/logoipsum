@@ -1,0 +1,68 @@
+@use "../../theme/fonts";
+@import "../../theme/sizes";
+@import "../../theme/breakpoints";
+@import "../../theme/colors";
+@import "../../theme/globals";
+
+.card {
+  width: 100%;
+  max-width: 37.6rem;
+  padding: $size-md;
+  display: grid;
+  border: 1px solid $neutral-focus;
+  border-radius: $radius;
+  @include fontSize(fonts.$size-md);
+
+  @include mq($tablet) {
+    @include fontSize(fonts.$size-sm);
+  }
+}
+
+.card--flex {
+  max-width: 100%;
+}
+
+.card__tag {
+  font-size: calc(1em + 1px);
+  margin-bottom: 2rem;
+}
+
+.card__title {
+  color: $base-focus;
+  font-family: fonts.$family-heading;
+  font-weight: 700;
+  @include fontSize(fonts.$size-2xl);
+
+  & > span {
+    @include fontSize(fonts.$size-xl);
+  }
+}
+
+.card__features {
+  display: grid;
+  align-self: center;
+  margin-top: $size-md;
+}
+.card__feature:not(:first-child) {
+  margin-top: $size-md;
+}
+
+.card__button {
+  align-self: flex-end;
+  margin-top: $size-lg;
+}
+
+.card--primary {
+  background-color: $neutral;
+  border-color: $neutral-focus;
+  color: $neutral-content;
+}
+.card--secondary {
+  background-color: $secondary;
+  border-color: $secondary-focus;
+
+  &,
+  & .card__title {
+    color: $secondary-content;
+  }
+}

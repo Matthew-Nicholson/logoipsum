@@ -1,18 +1,23 @@
 @use "../../theme/fonts";
-@use "../../theme/sizes";
+@import "../../theme/sizes";
 @import "../../theme/breakpoints";
 @import "../../theme/colors";
 @import "../../theme/globals";
 
 .hero {
+  width: 100%;
   text-align: left;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
   place-items: inherit;
-  @include gap(sizes.$size-md, $row: true, $column: true);
+  gap: $size-lg;
+
+  @include mq($phone) {
+    flex-direction: row;
+  }
 
   @include mq($tablet) {
-    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -22,14 +27,14 @@
 }
 
 .hero__desc {
-  margin-top: sizes.$size-md;
+  margin-top: $size-md;
 }
 
 .hero__btn-group {
-  margin-top: sizes.$size-xl;
+  margin-top: $size-xl;
   display: flex;
   align-items: center;
-  @include gap(sizes.$size-lg, $row: true);
+  @include gap($size-lg, $row: true);
 
   .download-icon {
     border: solid 1px $base-300;
@@ -42,15 +47,24 @@
 }
 
 .hero__img-container {
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  display: grid;
+  place-items: center;
+  flex: 1;
 }
 
 .hero__img {
-  width: calc(61rem / 2);
-  height: calc(64.4rem / 2);
+  width: calc(61rem / 3);
+  height: calc(64.4rem / 3);
+
+  @include mq($phone) {
+    width: calc(61rem / 2);
+    height: calc(64.4rem / 2);
+  }
+
+  @include mq($tablet) {
+    width: calc(61rem / 1.5);
+    height: calc(64.4rem / 1.5);
+  }
 
   @include mq($laptop) {
     width: 61rem;

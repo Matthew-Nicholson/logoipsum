@@ -82,8 +82,8 @@ p {
 .container {
   width: 100%;
   max-width: sizes.$container;
-  padding-left: sizes.$size-sm;
-  padding-right: sizes.$size-sm;
+  padding-left: sizes.$size-lg;
+  padding-right: sizes.$size-lg;
   @include mq(breakpoints.$laptop) {
     padding-left: 0;
     padding-right: 0;

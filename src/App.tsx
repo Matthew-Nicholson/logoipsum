@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import "./App.scss";
 import Layout from "./layout/Layout";
 import Hero from "./components/hero/Hero";
@@ -17,10 +17,7 @@ function App() {
           <h3 className="h3">Heading 3</h3>
           <h4 className="h4">Heading 4</h4>
           <br />
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci
-            suscipit voluptates saepe cumque modi!
-          </p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci suscipit voluptates saepe cumque modi!</p>
 
           <a href="/" className="link">
             Link

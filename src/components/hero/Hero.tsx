@@ -1,6 +1,7 @@
 import React from "react";
 import "./Hero.scss";
 import { ReactComponent as Icon } from "../../assets/arrow-down.svg";
+import Button from "../button/Button";
 
 const Hero = () => {
   return (
@@ -12,7 +13,7 @@ const Hero = () => {
           grow your subscription business end-to-end.
         </p>
         <div className="hero__btn-group">
-          <button>Get Started</button>
+          <Button variant="primary">Get Started</Button>
           <span className="download-icon">
             <Icon />
           </span>

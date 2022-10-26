@@ -1,0 +1,30 @@
+@import "../../theme/sizes";
+@import "../../theme/_colors.scss";
+@import "../../theme/globals.scss";
+
+.btn {
+  border: none;
+  border-radius: $radius;
+  padding: 1.9rem;
+  font-weight: 700;
+  min-width: 22.1rem;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+
+  &.flex {
+    width: 100%;
+  }
+
+  &.primary {
+    @include addColorScheme($primary, $primary-focus, $primary-content);
+  }
+  &.secondary {
+    @include addColorScheme($secondary, $secondary-focus, $secondary-content);
+  }
+  &.accent {
+    @include addColorScheme($accent, $accent-focus, $accent-content);
+  }
+  &.neutral {
+    @include addColorScheme($neutral, $neutral-focus, $neutral-content);
+  }
+}

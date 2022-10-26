@@ -14,6 +14,12 @@
   font-size: calc($size - ($size / $number));
 }
 
+@mixin mq($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
 @mixin fontSize($size) {
   @include decreaseFontSize($size);
   @include mq(breakpoints.$tablet) {
@@ -33,11 +39,5 @@
         margin-left: $size;
       }
     }
-  }
-}
-
-@mixin mq($breakpoint) {
-  @media (min-width: $breakpoint) {
-    @content;
   }
 }

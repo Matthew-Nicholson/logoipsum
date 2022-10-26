@@ -29,3 +29,6 @@
 .btn--neutral {
   @include addColorScheme($neutral, $neutral-focus, $neutral-content);
 }
+.btn--base {
+  @include addColorScheme($base-100, $base-200, $primary);
+}

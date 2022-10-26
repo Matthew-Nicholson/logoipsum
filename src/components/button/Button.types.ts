@@ -4,5 +4,5 @@ export type ButtonProps = {
   flex?: boolean;
   onClick?: () => void;
   path?: string;
-  variant?: "primary" | "secondary" | "accent" | "neutral";
+  variant?: "primary" | "secondary" | "accent" | "neutral" | "base";
 };

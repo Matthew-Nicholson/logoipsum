@@ -16,6 +16,7 @@ examples:
 - refactor: Button - change variant names
 - fix: missing prop error
 - chore: Component - Remove comments
+- wip: (work in progress) Button component
 
 ## Contributors
 

@@ -29,6 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @include fontSize(fonts.$size-md);
+  overflow-x: hidden;
 }
 
 p {
@@ -82,8 +83,12 @@ p {
 .container {
   width: 100%;
   max-width: sizes.$container;
-  padding-left: sizes.$size-lg;
-  padding-right: sizes.$size-lg;
+  padding-left: sizes.$size-sm;
+  padding-right: sizes.$size-sm;
+  @include mq(breakpoints.$phone) {
+    padding-left: sizes.$size-lg;
+    padding-right: sizes.$size-lg;
+  }
   @include mq(breakpoints.$laptop) {
     padding-left: 0;
     padding-right: 0;

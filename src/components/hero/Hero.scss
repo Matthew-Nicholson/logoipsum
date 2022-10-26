@@ -4,6 +4,8 @@
 @import "../../theme/colors";
 @import "../../theme/globals";
 
+$breakpoint: 750px;
+
 .hero {
   width: 100%;
   text-align: left;
@@ -13,17 +15,17 @@
   place-items: inherit;
   gap: $size-lg;
 
-  @include mq($phone) {
+  @include mq($breakpoint) {
     flex-direction: row;
-  }
-
-  @include mq($tablet) {
   }
 }
 
 .hero__content {
   max-width: 45.9rem;
-  text-align: left;
+  text-align: center;
+  @include mq($breakpoint) {
+    text-align: left;
+  }
 }
 
 .hero__desc {
@@ -34,7 +36,16 @@
   margin-top: $size-xl;
   display: flex;
   align-items: center;
-  @include gap($size-lg, $row: true);
+  justify-content: center;
+  flex-direction: column;
+  column-gap: $size-lg;
+  row-gap: $size-sm;
+  @include mq($phone) {
+    flex-direction: row;
+  }
+  @include mq($breakpoint) {
+    justify-content: flex-start;
+  }
 
   .download-icon {
     border: solid 1px $base-300;
@@ -57,13 +68,13 @@
   height: calc(64.4rem / 3);
 
   @include mq($phone) {
-    width: calc(61rem / 2);
-    height: calc(64.4rem / 2);
+    width: calc(61rem / 2.5);
+    height: calc(64.4rem / 2.5);
   }
 
   @include mq($tablet) {
-    width: calc(61rem / 1.5);
-    height: calc(64.4rem / 1.5);
+    width: calc(61rem / 1.75);
+    height: calc(64.4rem / 1.75);
   }
 
   @include mq($laptop) {

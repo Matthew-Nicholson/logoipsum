@@ -1,0 +1,21 @@
+@use "../../theme/fonts";
+@import "../../theme/sizes";
+@import "../../theme/breakpoints";
+@import "../../theme/colors";
+@import "../../theme/globals";
+
+.ft-card {
+  width: 100%;
+  max-width: 30.7rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.ft-card__img {
+  margin-bottom: 1rem;
+}
+
+.ft-card__desc {
+  margin-top: 2rem;
+}

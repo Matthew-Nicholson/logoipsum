@@ -1,8 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Temporarily ignored
-/src/components/app/App.tsx
-
 # dependencies
 /node_modules
 /.pnp

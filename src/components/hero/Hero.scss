@@ -4,8 +4,6 @@
 @import "../../theme/colors";
 @import "../../theme/globals";
 
-$breakpoint: 750px;
-
 .hero {
   width: 100%;
   text-align: left;
@@ -15,7 +13,7 @@ $breakpoint: 750px;
   place-items: inherit;
   gap: $size-lg;
 
-  @include mq($breakpoint) {
+  @include mq($tablet-sm) {
     flex-direction: row;
   }
 }
@@ -23,7 +21,7 @@ $breakpoint: 750px;
 .hero__content {
   max-width: 45.9rem;
   text-align: center;
-  @include mq($breakpoint) {
+  @include mq($tablet-sm) {
     text-align: left;
   }
 }
@@ -43,7 +41,7 @@ $breakpoint: 750px;
   @include mq($phone) {
     flex-direction: row;
   }
-  @include mq($breakpoint) {
+  @include mq($tablet-sm) {
     justify-content: flex-start;
   }
 

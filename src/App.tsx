@@ -3,6 +3,8 @@ import "./App.scss";
 import Layout from "./layout/Layout";
 import Hero from "./components/hero/Hero";
 import LogoList from "./components/logoList/LogoList";
+import Card from "./components/card/Card";
+import PACKAGES from "./data/packages.data";
 
 function App() {
   return (
@@ -11,8 +13,22 @@ function App() {
         <header className="app-header">
           <Hero />
           <LogoList />
+        </header>
 
-          <h1 className="h1">Heading 1</h1>
+        <div className="card-wrapper">
+          {PACKAGES.map((card, idx) => (
+            <Card key={`pck-${idx}`} {...card} />
+          ))}
+        </div>
+      </div>
+    </Layout>
+  );
+}
+
+export default App;
+
+/*
+<h1 className="h1">Heading 1</h1>
           <h2 className="h2">Heading 2</h2>
           <h3 className="h3">Heading 3</h3>
           <h4 className="h4">Heading 4</h4>
@@ -31,10 +47,4 @@ function App() {
             <div className="box neutral">Neutral</div>
             <div className="box base-200">Base</div>
           </div>
-        </header>
-      </div>
-    </Layout>
-  );
-}
-
-export default App;
+*/

@@ -72,3 +72,17 @@
     }
   }
 }
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: sizes.$size-lg;
+  padding: sizes.$size-md 0;
+
+  & > .card {
+    &.card--secondary {
+      transform: scale(1.05);
+    }
+  }
+}

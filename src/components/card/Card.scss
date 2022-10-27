@@ -6,8 +6,8 @@
 
 .card {
   width: 100%;
-  max-width: 37.6rem;
-  padding: $size-md;
+  max-width: 33rem;
+  padding: $size-md $size-md;
   display: grid;
   border: 1px solid $neutral-focus;
   border-radius: $radius;
@@ -34,7 +34,7 @@
   @include fontSize(fonts.$size-2xl);
 
   & > span {
-    @include fontSize(fonts.$size-xl);
+    @include fontSize(fonts.$size-lg);
   }
 }
 

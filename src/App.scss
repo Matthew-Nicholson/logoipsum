@@ -73,6 +73,12 @@
   }
 }
 
+.price-section {
+  & .tab-header {
+    margin-bottom: sizes.$size-lg;
+  }
+}
+
 .card-wrapper {
   display: flex;
   flex-wrap: wrap;

@@ -5,6 +5,7 @@ import Hero from "./components/hero/Hero";
 import LogoList from "./components/logoList/LogoList";
 import Card from "./components/card/Card";
 import PACKAGES from "./data/packages.data";
+import TabHeader from "./components/tabHeader/TabHeader";
 
 function App() {
   return (
@@ -15,11 +16,14 @@ function App() {
           <LogoList />
         </header>
 
-        <div className="card-wrapper">
-          {PACKAGES.map((card, idx) => (
-            <Card key={`pck-${idx}`} {...card} />
-          ))}
-        </div>
+        <section className="price-section">
+          <TabHeader title="Get the right plan for future product." />
+          <div className="card-wrapper">
+            {PACKAGES.map((card, idx) => (
+              <Card key={`pck-${idx}`} {...card} />
+            ))}
+          </div>
+        </section>
       </div>
     </Layout>
   );

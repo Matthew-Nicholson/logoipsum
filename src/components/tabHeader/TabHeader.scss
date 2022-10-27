@@ -1,0 +1,61 @@
+@use "../../theme/fonts";
+@import "../../theme/sizes";
+@import "../../theme/breakpoints";
+@import "../../theme/colors";
+@import "../../theme/globals";
+
+.tab-header {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: $size-md;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  @include mq($tablet-sm) {
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  & .tab-header__title {
+    flex: 1;
+    min-width: 45.9rem;
+  }
+
+  & .tabs {
+    background: $base-200;
+    padding: 0.5rem;
+    border-radius: $radius;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    & .tab {
+      border: none;
+      padding: 1.8rem 1rem;
+      text-align: center;
+      font-weight: 700;
+      @include fontSize(calc(fonts.$size-sm - 1px));
+      min-width: 16rem;
+      transition: all 150ms ease-in-out;
+      cursor: pointer;
+      @include addColorScheme($base-200, $base-200, $base-focus);
+
+      &:hover,
+      &:focus {
+        color: $primary;
+      }
+
+      &:first-child {
+        border-radius: $radius 0 0 $radius;
+      }
+      &:last-child {
+        border-radius: 0 $radius $radius 0;
+      }
+
+      &.active-tab {
+        @include addColorScheme($primary, $primary-focus, $primary-content);
+      }
+    }
+  }
+}

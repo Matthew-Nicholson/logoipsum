@@ -9,7 +9,6 @@ const Layout = ({ children }: LayoutProps) => {
     <>
       <nav>Navigation</nav>
       <main className="main container">{children}</main>
-      <footer>Footer if there is one</footer>
     </>
   );
 };
